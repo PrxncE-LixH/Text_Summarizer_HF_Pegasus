@@ -551,3 +551,136 @@ OSError: Incorrect path_or_model_id: 'artifacts/model_trainer/tokenizer'. Please
 [2024-05-29 20:57:49,018] : INFO: on: Waiting for application shutdown.]
 [2024-05-29 20:57:49,018] : INFO: on: Application shutdown complete.]
 [2024-05-29 20:57:49,018] : INFO: server: Finished server process [139380]]
+[2024-05-31 00:19:50,947] : INFO: config: PyTorch version 2.3.0 available.]
+[2024-05-31 00:19:53,375] : INFO: main: ++++++++++++++++++++++++++++++++]
+[2024-05-31 00:19:53,375] : INFO: main: >>>>> Data Ingestion Stage started <<<]
+[2024-05-31 00:19:53,381] : INFO: common: yaml file: config\config.yaml loaded successfully.]
+[2024-05-31 00:19:53,381] : INFO: common: yaml file: params.yaml loaded successfully.]
+[2024-05-31 00:19:53,382] : INFO: common: created directory at: artifacts]
+[2024-05-31 00:19:53,382] : INFO: common: created directory at: artifacts/data_ingestion]
+[2024-05-31 00:19:53,967] : INFO: data_ingestion: artifacts/data_ingestion/data.zip download with the following information: 
+ Connection: close
+Content-Length: 7903594
+Cache-Control: max-age=300
+Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+Content-Type: application/zip
+ETag: "dbc016a060da18070593b83afff580c9b300f0b6ea4147a7988433e04df246ca"
+Strict-Transport-Security: max-age=31536000
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-XSS-Protection: 1; mode=block
+X-GitHub-Request-Id: E02C:1726:26DD5:302D1:66594E5D
+Accept-Ranges: bytes
+Date: Fri, 31 May 2024 04:19:53 GMT
+Via: 1.1 varnish
+X-Served-By: cache-ewr18126-EWR
+X-Cache: HIT
+X-Cache-Hits: 0
+X-Timer: S1717129194.859111,VS0,VE53
+Vary: Authorization,Accept-Encoding,Origin
+Access-Control-Allow-Origin: *
+Cross-Origin-Resource-Policy: cross-origin
+X-Fastly-Request-ID: a1984eafeeb30c7aa149658c2023e66b9f585e3c
+Expires: Fri, 31 May 2024 04:24:53 GMT
+Source-Age: 0
+
+]
+[2024-05-31 00:19:54,036] : INFO: main: >>>>> stage Data Ingestion Stage completed <<< 
+
+x===========X]
+[2024-05-31 00:19:54,037] : INFO: main: --------------------------------]
+[2024-05-31 00:19:54,037] : INFO: main: >>>>> Data Validation Stage started <<<]
+[2024-05-31 00:19:54,038] : INFO: common: yaml file: config\config.yaml loaded successfully.]
+[2024-05-31 00:19:54,039] : INFO: common: yaml file: params.yaml loaded successfully.]
+[2024-05-31 00:19:54,040] : INFO: common: created directory at: artifacts]
+[2024-05-31 00:19:54,040] : INFO: common: created directory at: artifacts/data_validation]
+[2024-05-31 00:19:54,041] : INFO: main: >>>>> stage Data Validation Stage completed <<< 
+
+x===========X]
+[2024-05-31 00:19:54,041] : INFO: main: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~]
+[2024-05-31 00:19:54,041] : INFO: main: >>>>> Data Transformation Stage started <<<]
+[2024-05-31 00:19:54,042] : INFO: common: yaml file: config\config.yaml loaded successfully.]
+[2024-05-31 00:19:54,043] : INFO: common: yaml file: params.yaml loaded successfully.]
+[2024-05-31 00:19:54,043] : INFO: common: created directory at: artifacts]
+[2024-05-31 00:19:56,182] : INFO: main: >>>>> stage Data Transformation Stage completed <<< 
+
+x===========X]
+[2024-05-31 00:19:56,182] : INFO: main: ********************************]
+[2024-05-31 00:19:56,183] : INFO: main: >>>>> Training Stage started <<<]
+[2024-05-31 00:19:56,184] : INFO: common: yaml file: config\config.yaml loaded successfully.]
+[2024-05-31 00:19:56,185] : INFO: common: yaml file: params.yaml loaded successfully.]
+[2024-05-31 00:19:56,185] : INFO: common: created directory at: artifacts]
+[2024-05-31 00:19:56,185] : INFO: common: created directory at: artifacts/model_trainer]
+[2024-05-31 00:20:55,416] : ERROR: main: '>' not supported between instances of 'str' and 'int']
+Traceback (most recent call last):
+  File "c:\Users\P r x n c E  L i x H\Documents\M_L\NLP\projects\Text_summarizer\main.py", line 58, in <module>
+    model_trainer.main()
+  File "c:\Users\P r x n c E  L i x H\Documents\M_L\NLP\projects\Text_summarizer\src\text_summarizer\pipeline\stage_04_model_trainer.py", line 15, in main
+    model_trainer_config.train()
+  File "c:\Users\P r x n c E  L i x H\Documents\M_L\NLP\projects\Text_summarizer\src\text_summarizer\components\model_trainer.py", line 24, in train
+    trainer_args = TrainingArguments(   #set in Params.yaml
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<string>", line 128, in __init__
+  File "c:\Users\P r x n c E  L i x H\Documents\M_L\NLP\projects\Text_summarizer\textS\Lib\site-packages\transformers\training_args.py", line 1524, in __post_init__
+    if self.eval_strategy == IntervalStrategy.STEPS and self.eval_steps > 1:
+                                                        ^^^^^^^^^^^^^^^^^^^
+TypeError: '>' not supported between instances of 'str' and 'int'
+[2024-05-31 00:22:23,821] : INFO: config: PyTorch version 2.3.0 available.]
+[2024-05-31 00:22:24,884] : INFO: main: ++++++++++++++++++++++++++++++++]
+[2024-05-31 00:22:24,885] : INFO: main: >>>>> Data Ingestion Stage started <<<]
+[2024-05-31 00:22:24,887] : INFO: common: yaml file: config\config.yaml loaded successfully.]
+[2024-05-31 00:22:24,887] : INFO: common: yaml file: params.yaml loaded successfully.]
+[2024-05-31 00:22:24,887] : INFO: common: created directory at: artifacts]
+[2024-05-31 00:22:24,888] : INFO: common: created directory at: artifacts/data_ingestion]
+[2024-05-31 00:22:24,888] : INFO: data_ingestion: file already exists. ~ 7718 KB]
+[2024-05-31 00:22:24,952] : INFO: main: >>>>> stage Data Ingestion Stage completed <<< 
+
+x===========X]
+[2024-05-31 00:22:24,952] : INFO: main: --------------------------------]
+[2024-05-31 00:22:24,952] : INFO: main: >>>>> Data Validation Stage started <<<]
+[2024-05-31 00:22:24,953] : INFO: common: yaml file: config\config.yaml loaded successfully.]
+[2024-05-31 00:22:24,954] : INFO: common: yaml file: params.yaml loaded successfully.]
+[2024-05-31 00:22:24,954] : INFO: common: created directory at: artifacts]
+[2024-05-31 00:22:24,955] : INFO: common: created directory at: artifacts/data_validation]
+[2024-05-31 00:22:24,956] : INFO: main: >>>>> stage Data Validation Stage completed <<< 
+
+x===========X]
+[2024-05-31 00:22:24,956] : INFO: main: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~]
+[2024-05-31 00:22:24,956] : INFO: main: >>>>> Data Transformation Stage started <<<]
+[2024-05-31 00:22:24,957] : INFO: common: yaml file: config\config.yaml loaded successfully.]
+[2024-05-31 00:22:24,957] : INFO: common: yaml file: params.yaml loaded successfully.]
+[2024-05-31 00:22:24,958] : INFO: common: created directory at: artifacts]
+[2024-05-31 00:22:25,547] : INFO: main: >>>>> stage Data Transformation Stage completed <<< 
+
+x===========X]
+[2024-05-31 00:22:25,547] : INFO: main: ********************************]
+[2024-05-31 00:22:25,548] : INFO: main: >>>>> Training Stage started <<<]
+[2024-05-31 00:22:25,549] : INFO: common: yaml file: config\config.yaml loaded successfully.]
+[2024-05-31 00:22:25,550] : INFO: common: yaml file: params.yaml loaded successfully.]
+[2024-05-31 00:22:25,550] : INFO: common: created directory at: artifacts]
+[2024-05-31 00:22:25,550] : INFO: common: created directory at: artifacts/model_trainer]
+[2024-05-31 04:35:24,517] : INFO: main: >>>>> stage Training Stage completed <<< 
+
+x===========X]
+[2024-05-31 04:35:24,518] : INFO: main: ##############################]
+[2024-05-31 04:35:24,518] : INFO: main: >>>>> Model Evaluation Stage started <<<]
+[2024-05-31 04:35:24,520] : INFO: common: yaml file: config\config.yaml loaded successfully.]
+[2024-05-31 04:35:24,521] : INFO: common: yaml file: params.yaml loaded successfully.]
+[2024-05-31 04:35:24,521] : INFO: common: created directory at: artifacts]
+[2024-05-31 04:35:24,522] : INFO: common: created directory at: artifacts/model_evaluation]
+[2024-05-31 04:36:47,073] : INFO: rouge_scorer: Using default tokenizer.]
+[2024-05-31 04:36:47,185] : INFO: main: >>>>> stage Model Evaluation Stage completed <<< 
+
+x===========X]
+[2024-05-31 10:25:10,845] : INFO: server: Started server process [68020]]
+[2024-05-31 10:25:10,845] : INFO: on: Waiting for application startup.]
+[2024-05-31 10:25:10,846] : INFO: on: Application startup complete.]
+[2024-05-31 10:25:10,847] : INFO: server: Uvicorn running on http://0.0.0.0:8080 (Press CTRL+C to quit)]
+[2024-05-31 10:26:49,938] : INFO: common: yaml file: config\config.yaml loaded successfully.]
+[2024-05-31 10:26:49,942] : INFO: common: yaml file: params.yaml loaded successfully.]
+[2024-05-31 10:26:49,942] : INFO: common: created directory at: artifacts]
+[2024-05-31 10:26:49,942] : INFO: common: created directory at: artifacts/model_evaluation]
+[2024-05-31 10:28:19,593] : INFO: common: yaml file: config\config.yaml loaded successfully.]
+[2024-05-31 10:28:19,594] : INFO: common: yaml file: params.yaml loaded successfully.]
+[2024-05-31 10:28:19,594] : INFO: common: created directory at: artifacts]
+[2024-05-31 10:28:19,595] : INFO: common: created directory at: artifacts/model_evaluation]
