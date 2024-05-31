@@ -12,7 +12,7 @@ text:str = "Input the text you want to summarize."
 
 app = FastAPI()
 
-@app.get('/', tags=['authentication'])    #default route
+@app.get('/', tags=['authentication'])    # default route
 async def index():
     return RedirectResponse(url="/docs")
 
@@ -26,7 +26,7 @@ async def train():
         return Response(f"Error occured{e}")
     
     
-@app.post("/predict")       # prediction route
+@app.post("/predict")       # prediction route.
 async def predict(text):
     try:
         obj = PredictionPipeline()
