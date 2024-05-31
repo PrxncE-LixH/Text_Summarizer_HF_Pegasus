@@ -8,7 +8,7 @@ from fastapi.responses import Response
 from src.text_summarizer.pipeline.prediction import PredictionPipeline
 
 
-text:str = "Input text"
+text:str = "Input the text you want to summarize."
 
 app = FastAPI()
 
